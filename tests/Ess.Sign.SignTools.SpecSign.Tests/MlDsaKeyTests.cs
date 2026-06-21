@@ -17,6 +17,11 @@ public sealed class MlDsaKeyTests
     [InlineData(MlDsaParameterSet.ML_DSA_87)]
     public void Generate_SignAndVerify_RoundTrips(MlDsaParameterSet parameterSet)
     {
+        if (!IsSupported())
+        {
+            return;
+        }
+
         using var key = MlDsaKey.Generate(parameterSet);
         byte[] hash = [1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -35,6 +40,11 @@ public sealed class MlDsaKeyTests
     [InlineData(MlDsaParameterSet.ML_DSA_87, false)]
     public void ByteArrayConstructor_ImportsExpectedKeyKind(MlDsaParameterSet parameterSet, bool usePrivateKey)
     {
+        if (!IsSupported())
+        {
+            return;
+        }
+
         using var algorithm = System.Security.Cryptography.MLDsa.GenerateKey(ToAlgorithm(parameterSet));
         var keyBytes = usePrivateKey
             ? algorithm.ExportPkcs8PrivateKey()
@@ -52,6 +62,11 @@ public sealed class MlDsaKeyTests
     [Fact]
     public void FileConstructor_LoadsPemPrivateKey()
     {
+        if (!IsSupported())
+        {
+            return;
+        }
+
         using var algorithm = System.Security.Cryptography.MLDsa.GenerateKey(MLDsaAlgorithm.MLDsa65);
         var path = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid():N}.pem");
 
@@ -73,6 +88,11 @@ public sealed class MlDsaKeyTests
     [Fact]
     public void PlaceholderSignature_WritesDigestFile()
     {
+        if (!IsSupported())
+        {
+            return;
+        }
+
         using var key = MlDsaKey.Generate(MlDsaParameterSet.ML_DSA_44);
         var directory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString("N"));
         byte[] hash = [9, 8, 7, 6];
@@ -107,6 +127,11 @@ public sealed class MlDsaKeyTests
     [Fact]
     public void GetPropertyValue_ExposesAlgorithmMetadata()
     {
+        if (!IsSupported())
+        {
+            return;
+        }
+
         using var key = MlDsaKey.Generate(MlDsaParameterSet.ML_DSA_87);
 
         var algorithm = Assert.IsType<StringOperand>(key.GetPropertyValue("algorithm"));
@@ -137,5 +162,18 @@ public sealed class MlDsaKeyTests
         }
 
         return value;
+    }
+
+    private static bool IsSupported()
+    {
+        try
+        {
+            using var _ = System.Security.Cryptography.MLDsa.GenerateKey(MLDsaAlgorithm.MLDsa44);
+            return true;
+        }
+        catch (PlatformNotSupportedException)
+        {
+            return false;
+        }
     }
 }

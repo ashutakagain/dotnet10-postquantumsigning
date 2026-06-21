@@ -393,6 +393,16 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Ess.Sign.SignTools.SpecSign/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Ess.Sign.SignTools.SpecSign.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ess.Sign.SignTools.SpecSign.dll": {}
+        }
       }
     }
   },
@@ -903,10 +913,16 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Ess.Sign.SignTools.SpecSign/1.0.0": {
+      "type": "project",
+      "path": "../../src/Ess.Sign.SignTools.SpecSign/Ess.Sign.SignTools.SpecSign.csproj",
+      "msbuildProject": "../../src/Ess.Sign.SignTools.SpecSign/Ess.Sign.SignTools.SpecSign.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Ess.Sign.SignTools.SpecSign >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -938,7 +954,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/Ess.Sign.SignTools.SpecSign.csproj": {
+              "projectPath": "/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/Ess.Sign.SignTools.SpecSign.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

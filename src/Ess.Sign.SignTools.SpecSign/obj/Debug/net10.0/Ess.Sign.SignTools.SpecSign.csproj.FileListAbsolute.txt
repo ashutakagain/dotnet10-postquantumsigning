@@ -1,0 +1,12 @@
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.AssemblyInfoInputs.cache
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.AssemblyInfo.cs
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.csproj.CoreCompileInputs.cache
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.sourcelink.json
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/bin/Debug/net10.0/Ess.Sign.SignTools.SpecSign.deps.json
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/bin/Debug/net10.0/Ess.Sign.SignTools.SpecSign.dll
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/bin/Debug/net10.0/Ess.Sign.SignTools.SpecSign.pdb
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.dll
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/refint/Ess.Sign.SignTools.SpecSign.dll
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/Ess.Sign.SignTools.SpecSign.pdb
+/home/runner/work/dotnet10-postquantumsigning/dotnet10-postquantumsigning/src/Ess.Sign.SignTools.SpecSign/obj/Debug/net10.0/ref/Ess.Sign.SignTools.SpecSign.dll

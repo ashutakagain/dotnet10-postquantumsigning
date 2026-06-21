@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 namespace Ess.Sign.SignTools.SpecSign.Crypto.MLDsa;
 
 [SupportedOSPlatform("windows")]
-internal static partial class CngHandleSigner
+internal static class CngHandleSigner
 {
     private const int NcryptPqdsaPaddingFlag = 0x00000080;
 
@@ -52,8 +52,8 @@ internal static partial class CngHandleSigner
         }
     }
 
-    [LibraryImport("ncrypt.dll")]
-    private static partial int NCryptSignHash(
+    [DllImport("ncrypt.dll")]
+    private static extern int NCryptSignHash(
         IntPtr hKey,
         IntPtr pPaddingInfo,
         byte[] pbHashValue,

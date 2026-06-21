@@ -1,2 +1,8 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ess.Sign.SignTools.SpecSign/Ess.Sign.SignTools.SpecSign.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ess.Sign.SignTools.SpecSign.Tests/Ess.Sign.SignTools.SpecSign.Tests.csproj" />
+  </Folder>
 </Solution>

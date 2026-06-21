@@ -183,6 +183,11 @@ public class MlDsaKey : IPropertyCapable, IDisposable
 
         if (cngKeyHandle is not null)
         {
+            if (!OperatingSystem.IsWindows())
+            {
+                throw new PlatformNotSupportedException("CNG-backed ML-DSA signing is only supported on Windows.");
+            }
+
             return SignViaCngHandle(hash);
         }
 
