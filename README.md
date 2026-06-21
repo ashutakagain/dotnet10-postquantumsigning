@@ -1,2 +1,14 @@
 # dotnet10-postquantumsigning
-This MLDSAKey.cs and its unit test methods are available for consumption for any third party folks to use them for their PQC signing scenarios
+
+Minimal .NET 10 ML-DSA key handling library and tests for post-quantum signing scenarios.
+
+## Projects
+
+- `src/Ess.Sign.SignTools.SpecSign`: ML-DSA key implementation and supporting types.
+- `tests/Ess.Sign.SignTools.SpecSign.Tests`: focused unit tests for generation, import, signing, and placeholder output.
+
+## Validation
+
+```bash
+dotnet test dotnet10-postquantumsigning.slnx
+```
