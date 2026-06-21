@@ -10,5 +10,5 @@ Minimal .NET 10 ML-DSA key handling library and tests for post-quantum signing s
 ## Validation
 
 ```bash
-dotnet test dotnet10-postquantumsigning.slnx
+dotnet test dotnet10-postquantumsigning.sln
 ```
