@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- ML-DSA is shipped as an experimental API in .NET 10; suppress the opt-in diagnostic. -->
+    <NoWarn>$(NoWarn);SYSLIB5006;CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- ===================== NuGet package metadata ===================== -->
+  <PropertyGroup>
+    <PackageId>PostQuantum.MlDsa</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>PostQuantum.MlDsa Contributors</Authors>
+    <Product>PostQuantum.MlDsa</Product>
+    <Title>ML-DSA (FIPS 204) Post-Quantum Digital Signatures for .NET</Title>
+    <Description>A dependency-free .NET 10 library for generating and verifying post-quantum digital signatures with ML-DSA (Module-Lattice-Based Digital Signature Algorithm), standardized by NIST in FIPS 204. Supports ML-DSA-44, ML-DSA-65, and ML-DSA-87, including key generation, PEM/DER/certificate loading, import/export, managed software keys, and Windows CNG/NCrypt HSM keys.</Description>
+    <PackageTags>ml-dsa;mldsa;post-quantum;pqc;fips204;cryptography;digital-signature;dilithium;security;dotnet</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/ashutakagain/dotnet10-postquantumsigning</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ashutakagain/dotnet10-postquantumsigning</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial release with ML-DSA-44, ML-DSA-65, and ML-DSA-87 software signing, verification, key import/export, certificate loading, and Windows CNG/NCrypt HSM support.</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright (c) 2026 PostQuantum.MlDsa contributors</Copyright>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\PACKAGE_METADATA.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
